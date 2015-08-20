@@ -1,7 +1,5 @@
-# hangul-morphemes
-
 # [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> 
+> 한글 문장 및 어절을 세종계획 기반의 형태소로 태깅하기 위한 라이브러리
 
 
 ## Install
