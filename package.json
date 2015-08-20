@@ -1,5 +1,5 @@
 {
-  "name": "hangul-morphemes",
+  "name": "sejong-morphemes",
   "version": "0.1.0",
   "description": "decode morphemes text into morphemes object, or encode morphemes object into morphemes text based on tags from sejong project",
   "author": {
@@ -39,5 +39,8 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "hangul-js": "^0.1.6"
+  }
 }

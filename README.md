@@ -14,23 +14,23 @@ $ npm install --save hangul-morphemes
 ```js
 var morphemesText = '정치가/NNG 모임/NNG+이/JC 새로/MA 구성/NNG+되/XS+ㄴ다/EF+./SF';
 var morphemesObj = {
-	sentence: '정치가 모임이 새로 구성된다.',
-	morphemes: [
+	text: '정치가 모임이 새로 구성된다.',
+	words: [
 		{
-			word: '정치가',
-			morphemes: [{word: '정치가', type: 'NNG'}]
+			text: '정치가',
+			morphemes: [{text: '정치가', type: 'NNG'}]
 		},
 		{
-			word: '모임이',
-			morphemes: [{word: '모임', type: 'NNG'}, {word: '이', type: 'JC'}]
+			text: '모임이',
+			morphemes: [{text: '모임', type: 'NNG'}, {text: '이', type: 'JC'}]
 		},
 		{
-			word: '새로',
-			morphemes: [{word: '새로', type: 'MA'}]
+			text: '새로',
+			morphemes: [{text: '새로', type: 'MA'}]
 		},
 		{
-			word: '구성된다',
-			morphemes: [{word: '구성', type: 'NNG'}, {word: '되', type: 'XS'}, {word: 'ㄴ다', type: 'EF'}, {word: '.', type: 'SF'}]
+			text: '구성된다',
+			morphemes: [{text: '구성', type: 'NNG'}, {text: '되', type: 'XS'}, {text: 'ㄴ다', type: 'EF'}, {text: '.', type: 'SF'}]
 		}
 	]
 };
