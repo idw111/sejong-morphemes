@@ -71,11 +71,11 @@ word.add(morpheme2);
 MIT © [Dongwon Lim](./LICENSE)
 
 
-[npm-image]: https://badge.fury.io/js/hangul-morphemes.svg
-[npm-url]: https://npmjs.org/package/hangul-morphemes
-[travis-image]: https://travis-ci.org//hangul-morphemes.svg?branch=master
-[travis-url]: https://travis-ci.org//hangul-morphemes
-[daviddm-image]: https://david-dm.org//hangul-morphemes.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//hangul-morphemes
-[coveralls-image]: https://coveralls.io/repos//hangul-morphemes/badge.svg
-[coveralls-url]: https://coveralls.io/r//hangul-morphemes
+[npm-image]: https://badge.fury.io/js/sejong-morphemes.svg
+[npm-url]: https://npmjs.org/package/sejong-morphemes
+[travis-image]: https://travis-ci.org/idw111/sejong-morphemes.svg?branch=master
+[travis-url]: https://travis-ci.org/idw111/sejong-morphemes
+[daviddm-image]: https://david-dm.org/idw111/sejong-morphemes.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/idw111/sejong-morphemes
+[coveralls-image]: https://coveralls.io/repos/69737/sejong-morphemes/badge.svg
+[coveralls-url]: https://coveralls.io/github/idw111/sejong-morphemes
