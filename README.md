@@ -77,5 +77,5 @@ MIT © [Dongwon Lim](./LICENSE)
 [travis-url]: https://travis-ci.org/idw111/sejong-morphemes
 [daviddm-image]: https://david-dm.org/idw111/sejong-morphemes.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/idw111/sejong-morphemes
-[coveralls-image]: https://coveralls.io/repos/69737/sejong-morphemes/badge.svg
-[coveralls-url]: https://coveralls.io/github/idw111/sejong-morphemes
+[coveralls-image]: https://coveralls.io/repos/idw111/sejong-morphemes/badge.svg?branch=master&service=github
+[coveralls-url]: https://coveralls.io/github/idw111/sejong-morphemes?branch=master
