@@ -1,11 +1,14 @@
 var expect = require('expect.js');
 var morphemes = require('../lib');
-var MorphemeType = morphemes.Type;
 var Morpheme = morphemes.Morpheme;
 var Word = morphemes.Word;
 var Sentence = morphemes.Sentence;
 
 describe('hangul-morphemes', function () {
+
+    before(function() {
+        morphemes.initialize();
+    });
 
     it('형태소 객체를 생성할 수 있다.', function() {
         var morpheme = new Morpheme('가나다', 'NNG');
