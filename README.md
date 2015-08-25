@@ -36,6 +36,8 @@ var morphemesObj = {
 };
 
 var morphemes = require('hangul-morphemes');
+morphemes.initialize();
+
 var Morpheme = morphemes.Morpheme;
 var Word = morphemes.Word;
 var Phrase = morphemes.Phrase;
@@ -64,7 +66,33 @@ word.add(morpheme1);
 word.add(morpheme2);
 // word.toString() === word2.toString();
 // word.toObject() == word2.toObject();
+
+var phrase = new Phrase();
+
+// 내장된 태그셋과 다른 태그셋을 이용하고자 할 때는
+// initialize 함수에 사용하고자 하는 태그셋을 인자로 넘겨준다.
+// alias를 지정하면 해당 태그에 대해 alias를 이용할 수 있다.
+morphemes.initialize({
+	morpheme: {
+		tag: {
+			ABC: 'abc',
+			DEF: 'def'
+		},
+		alias: {
+			'뮻': 'ABC',
+			'뮤ㅊ': 'ABC',
+			'ㅁㅠㅊ': 'ABC',
+			'ㅇㄷㄹ': 'DEF'
+		}
+	},
+	phrase: {
+		tag: {},
+		alias: {}
+	}
+});
+
 ```
+
 
 ## License
 
