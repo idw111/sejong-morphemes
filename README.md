@@ -68,6 +68,10 @@ word.add(morpheme2);
 // word.toJSON() == word2.toJSON();
 
 var phrase = new Phrase();
+var structure = new SentenceStructure(sentence);
+structure.connect(0, 1);
+structure.connect(0, 3);
+structure.disconnect(0, 1);
 
 // 내장된 태그셋과 다른 태그셋을 이용하고자 할 때는
 // initialize 함수에 사용하고자 하는 태그셋을 인자로 넘겨준다.

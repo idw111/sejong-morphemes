@@ -74,7 +74,12 @@ describe('hangul-morphemes', function () {
         var structure = new SentenceStructure(sentence);
         structure.connect(0, 1);
         structure.connect(1, 2);
+        structure.connect(1, 3);
         structure.connect(2, 3);
+        expect(structure.getCordCount(0)).to.be(1);
+        expect(structure.getCordCount(1)).to.be(3);
+        expect(structure.getStartingCordIndex(1, 2)).to.be(1);
+        expect(structure.getEndingCordIndex(1, 2)).to.be(0);
     });
 
 });
