@@ -3,6 +3,8 @@ var morphemes = require('../lib');
 var Morpheme = morphemes.Morpheme;
 var Word = morphemes.Word;
 var Sentence = morphemes.Sentence;
+var Phrase = morphemes.Phrase;
+var SentenceStructure = morphemes.SentenceStructure;
 
 describe('hangul-morphemes', function () {
 
@@ -52,6 +54,27 @@ describe('hangul-morphemes', function () {
     it('텍스트를 인자로 받아 문장 객체를 생성할 수 있다.', function() {
         var sentence = new Sentence('정치가/NNG 모임/NNG+이/JC 새로/MA 구성/NNG+되/XS+ㄴ다/EF+./SF');
         expect(sentence.getText()).to.be('정치가 모임이 새로 구성된다.');
+    });
+
+    it('두 개의 단어 객체를 인자로하여 구문 객체를 생성할 수 있다.', function() {
+        var sentence = new Sentence('정치가/NNG 모임/NNG+이/JC 새로/MA 구성/NNG+되/XS+ㄴ다/EF+./SF');
+        var words = sentence.words.map(function(word, index) {
+            word.index = index;
+            return word;
+        });
+        var phrase = new Phrase(words[0], words[1]);
+        expect(phrase.toString()).to.be('0 1 ??? 정치가/NNG');
+        expect(phrase.connects(0, 1)).to.be.ok();
+        phrase.tag('SBJ');
+        expect(phrase.toString()).to.be('0 1 SBJ 정치가/NNG');
+    });
+
+    it('문장을 인자로 하여 문장구조 객체를 생성할 수 있다.', function() {
+        var sentence = new Sentence('정치가/NNG 모임/NNG+이/JC 새로/MA 구성/NNG+되/XS+ㄴ다/EF+./SF');
+        var structure = new SentenceStructure(sentence);
+        structure.connect(0, 1);
+        structure.connect(1, 2);
+        structure.connect(2, 3);
     });
 
 });

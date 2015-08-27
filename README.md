@@ -45,7 +45,7 @@ var Sentence = morphemes.Sentence;
 
 var sentence1 = new Sentence(morphemesText);
 // sentence1.toString() === morphemesText
-// sentence1.toObject() == morphemesObj
+// sentence1.toJSON() == morphemesObj
 
 var sentence2 = new Sentence();
 var word1 = new Word('정치가/NNG');
@@ -57,7 +57,7 @@ sentence2.add(word2);
 sentence2.add(word3);
 sentence2.add(word4);
 // sentence2.toString() === morphemesText
-// sentence2.toObject() == morphemesObj
+// sentence2.toJSON() == morphemesObj
 
 var word = new Word();
 var morpheme1 = new Morpheme('모임', 'NNG');
@@ -65,7 +65,7 @@ var morpheme2 = new Morpheme('이', 'JC');
 word.add(morpheme1);
 word.add(morpheme2);
 // word.toString() === word2.toString();
-// word.toObject() == word2.toObject();
+// word.toJSON() == word2.toJSON();
 
 var phrase = new Phrase();
 
@@ -91,6 +91,20 @@ morphemes.initialize({
 	}
 });
 
+// 태그는 기본적으로 영문 대문자로 가정한다.
+// 소문자 태그를 사용하는 경우에는 alias를 지정해야 한다.
+morphemes.initialize({
+	morpheme: {
+		tag: {
+			root: '어근'
+			modi: '한정자'
+		},
+		alias: {
+			'ROOT': 'root',
+			'MODI': 'modi'
+		}
+	}
+});
 ```
 
 
