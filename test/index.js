@@ -1,15 +1,15 @@
 var expect = require('expect.js');
-var morphemes = require('../lib');
-var Morpheme = morphemes.Morpheme;
-var Word = morphemes.Word;
-var Sentence = morphemes.Sentence;
-var Phrase = morphemes.Phrase;
-var SentenceStructure = morphemes.SentenceStructure;
+var Sejong = require('../lib');
+var Morpheme = Sejong.Morpheme;
+var Word = Sejong.Word;
+var Sentence = Sejong.Sentence;
+var Phrase = Sejong.Phrase;
+var Structure = Sejong.Structure;
 
-describe('hangul-morphemes', function () {
+describe('hangul-Sejong', function () {
 
     before(function() {
-        morphemes.initialize();
+        Sejong.initialize();
     });
 
     it('형태소 객체를 생성할 수 있다.', function() {
@@ -31,14 +31,12 @@ describe('hangul-morphemes', function () {
         word.add(new Morpheme('모임/NNG'));
         word.add(new Morpheme('이/JC'));
         expect(word.getText()).to.be('모임이');
-        expect(word.getType()).to.be('NNG+JC');
         expect(word.toString()).to.be('모임/NNG+이/JC');
     });
 
     it('텍스트를 인자로 받아 어절 객체를 생성할 수 있다.', function() {
         var word = new Word('모임/NNG+이/JC');
         expect(word.getText()).to.be('모임이');
-        expect(word.getType()).to.be('NNG+JC');
         expect(word.toString()).to.be('모임/NNG+이/JC');
     });
 
@@ -71,15 +69,13 @@ describe('hangul-morphemes', function () {
 
     it('문장을 인자로 하여 문장구조 객체를 생성할 수 있다.', function() {
         var sentence = new Sentence('정치가/NNG 모임/NNG+이/JC 새로/MA 구성/NNG+되/XS+ㄴ다/EF+./SF');
-        var structure = new SentenceStructure(sentence);
+        var structure = new Structure(sentence);
         structure.connect(0, 1);
         structure.connect(1, 2);
         structure.connect(1, 3);
         structure.connect(2, 3);
         expect(structure.getCordCount(0)).to.be(1);
         expect(structure.getCordCount(1)).to.be(3);
-        expect(structure.getStartingCordIndex(1, 2)).to.be(1);
-        expect(structure.getEndingCordIndex(1, 2)).to.be(0);
     });
 
 });
