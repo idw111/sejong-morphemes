@@ -56,10 +56,10 @@ describe('sejong-morphemes 테스트', function () {
             return word;
         });
         var phrase = new Sejong.Phrase(words[0], words[1]);
-        expect(phrase.toString()).to.be('1 2 ??? 정치가/NNG');
+        expect(phrase.toString()).to.be('0 1 ??? 정치가/NNG');
         expect(phrase.connects(0, 1)).to.be.ok();
         phrase.tag('SUBJ');
-        expect(phrase.toString()).to.be('1 2 SUBJ 정치가/NNG');
+        expect(phrase.toString()).to.be('0 1 SUBJ 정치가/NNG');
     });
 
     it('문장을 인자로 하여 문장구조 객체를 생성할 수 있다.', function() {
