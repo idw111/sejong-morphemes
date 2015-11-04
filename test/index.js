@@ -40,7 +40,7 @@ describe('sejong-morphemes 테스트', function () {
         sentence.add(new Sejong.Word('정치가/NNG'));
         sentence.add(new Sejong.Word('모임/NNG+이/JC'));
         sentence.add(new Sejong.Word('새로/MA'));
-        sentence.add(new Sejong.Word('구성된다.'));
+        sentence.add(new Sejong.Word('구성/NNG+되/XS+ㄴ다/EF+./SF'));
         expect(sentence.getText()).to.be('정치가 모임이 새로 구성된다.');
     });
 
