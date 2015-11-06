@@ -71,6 +71,10 @@ describe('sejong-morphemes 테스트', function () {
         structure.connect(2, 3);
         expect(structure.getCordCount(0)).to.be(1);
         expect(structure.getCordCount(1)).to.be(3);
+
+        structure.clear();
+        expect(structure.getCordCount(0)).to.be(0);
+        expect(structure.getCordCount(1)).to.be(0);
     });
 
 });

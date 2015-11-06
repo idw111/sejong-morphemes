@@ -1,6 +1,6 @@
 {
   "name": "sejong-morphemes",
-  "version": "0.4.25",
+  "version": "0.4.26",
   "description": "decode morphemes text into morphemes object, or encode morphemes object into morphemes text based on tags from sejong project",
   "author": {
     "name": "Dongwon Lim",
