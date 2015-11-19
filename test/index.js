@@ -77,4 +77,10 @@ describe('sejong-morphemes 테스트', function () {
         expect(structure.getCordCount(1)).to.be(0);
     });
 
+    it('개체명 객체를 생성할 수 있다.', function() {
+        const sentence = '전주 한옥마을로';
+        const entity = new Sejong.NamedEntity('전주', 0, 'CITY');
+        expect(entity.type).to.be('CITY');
+    });
+
 });
